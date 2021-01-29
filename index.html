@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"
+    />
+    <title>Code Editor</title>
+    <!-- Bootstrap v4.0.0 -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!-- CodeMirror -->
+    <link rel="stylesheet" href="/CodeMirror/lib/codemirror.css" />
+    <link rel="stylesheet" href="/CodeMirror/theme/ayu-mirage.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .CodeMirror {
+        /* Add a circular effect to the editor */
+        border-radius: 15px;
+      }
+    </style>
+  </head>
+  <body
+    style="background-color: #0d0d0d; font-family: 'Source Code Pro', monospace"
+  >
+    <!-- Title -->
+    <h1 class="text-center text-white">
+      <span
+        ><img
+          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"
+          class="rounded"
+          width="50px"
+      /></span>
+      Code Editor
+    </h1>
+    <!-- Text Editor -->
+    <div class="w-50" style="position: absolute; top: 20%; left: 25%">
+      <textarea id="code"></textarea>
+      <!-- Buttons -->
+      <button
+        class="btn rounded mt-3"
+        style="background-color: #1f2430; color: white"
+        onclick="execute()"
+      >
+        Execute JS Code
+      </button>
+      <button
+        id="clear"
+        class="btn rounded mt-3"
+        style="background-color: #1f2430; color: white"
+        onclick="clearEditor();"
+      >
+        Clear Editor
+      </button>
+    </div>
+    <!-- Scripts -->
+    <script src="/CodeMirror/lib/codemirror.js"></script>
+    <script src="/CodeMirror/mode/javascript/javascript.js"></script>
+    <script src="./codemirror.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
